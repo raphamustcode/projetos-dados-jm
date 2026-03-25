@@ -1,0 +1,11 @@
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/core-plugins.json
+
+data/*
+!data/.gitkeep
+
+__pycache__/
+*.py[cod]
+.env
+venv/
