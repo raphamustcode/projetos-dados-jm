@@ -1,4 +1,4 @@
-# 🛡️ Diário de Bordo: Script de Anonimização e Mock de Dados
+# Diário de Bordo: Script de Anonimização e Mock de Dados
 
 **Data:** 23/03/2026
 **Objetivo:** Proteger os dados sensíveis dos clientes e gerar massa de dados financeiros para testes preliminares.
