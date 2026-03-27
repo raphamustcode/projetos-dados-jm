@@ -21,18 +21,18 @@ def anonimizar_e_preencher_planilha(caminho_entrada, caminho_saida):
 
     print("Anonimizando dados sensíveis e gerando dados financeiros de teste...")
     
-    if 'Contato' in df.columns:
-        df['Contato'] = [fake.company() for _ in range(len(df))]
-        
-    if 'Telefone' in df.columns:
-        df['Telefone'] = [fake.phone_number() for _ in range(len(df))]
+    if 'Nome Fantasia' in df.columns:
+        df['Nome Fantasia'] = [fake.company() for _ in range(len(df))]
 
-    coluna_valor = 'Valor Compra Semanal'
+    if 'Ponto de Contato' in df.columns:
+        df['Ponto de Contato'] = [fake.phone_number() for _ in range(len(df))]
+
+    coluna_valor = 'Ticket Médio Mensal'
     if coluna_valor in df.columns:
         vazios = df[coluna_valor].isna() 
         df.loc[vazios, coluna_valor] = [f"{random.uniform(150.0, 800.0):.2f}".replace('.', ',') for _ in range(vazios.sum())]
 
-    coluna_data = 'Data da Última Compra'
+    coluna_data = 'Recência'
     if coluna_data in df.columns:
         df[coluna_data] = df[coluna_data].astype('object')
         vazios = df[coluna_data].isna()
